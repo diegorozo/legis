@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAQ,0EAAkE;AAO1E,IAAI;EACH,WAAW,EAAE,qBAAqB;EAClC,SAAS,EAAE,IAAI;EACf,KAAK,EANE,OAAO;EAOd,QAAQ,EAAE,QAAQ;;AAEnB,cAAc;EACb,WAAW,EAAE,qBAAqB;EAClC,KAAK,EAbE,OAAO;;AAcf,CAAC;EACA,KAAK,EAbE,OAAO;;AAcf,CAAC;EACA,KAAK,EAjBE,OAAO",
+"sources": ["ax-style.sass"],
+"names": [],
+"file": "ax-style.css"
+}

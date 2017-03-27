@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #858485;
+  position: relative; }
+
+h1, h2, h3, h4 {
+  font-family: "Raleway", sans-serif;
+  color: #008A98; }
+
+p {
+  color: #858485; }
+
+a {
+  color: #008A98; }
+
+/*# sourceMappingURL=ax-style.css.map */
