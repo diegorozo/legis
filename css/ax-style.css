@@ -100,7 +100,8 @@ h1, h2, h3, h4 {
       height: 90px;
       border-top: 1px solid rgba(255, 255, 255, 0.2); }
   .ax-modulo .ax-md {
-    background: #f5f6fa; }
+    background: #f5f6fa;
+    height: 630px; }
     .ax-modulo .ax-md .ax-itemmod {
       background: #e2e6e9;
       padding: 15px; }
@@ -112,8 +113,8 @@ h1, h2, h3, h4 {
         font-size: 13px; }
     .ax-modulo .ax-md .ax-item-mod {
       background-color: white;
-      padding: 15px;
-      margin: 15px;
+      padding: 10px;
+      margin: 24px 15px;
       border-radius: 5px;
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); }
       .ax-modulo .ax-md .ax-item-mod h4 {
@@ -124,9 +125,11 @@ h1, h2, h3, h4 {
       .ax-modulo .ax-md .ax-item-mod p {
         font-size: 12px; }
   .ax-modulo .ax-modcomple {
+    cursor: pointer; }
+  .ax-modulo .ax-modcomple, .ax-modulo .ax-modcomple2 {
     background: #ff563c;
     height: 630px; }
-    .ax-modulo .ax-modcomple .ax-modico .ax-incog {
+    .ax-modulo .ax-modcomple .ax-modico .ax-incog2, .ax-modulo .ax-modcomple2 .ax-modico .ax-incog2 {
       background-color: #303644;
       text-align: center;
       height: 70px;
@@ -134,20 +137,91 @@ h1, h2, h3, h4 {
       align-items: center;
       align-content: center;
       justify-content: center;
-      font-size: 60px; }
-      .ax-modulo .ax-modcomple .ax-modico .ax-incog p {
+      font-size: 60px;
+      position: relative; }
+      .ax-modulo .ax-modcomple .ax-modico .ax-incog2:after, .ax-modulo .ax-modcomple2 .ax-modico .ax-incog2:after {
+        content: "";
+        position: absolute;
+        bottom: -9px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #303644; }
+      .ax-modulo .ax-modcomple .ax-modico .ax-incog2 p, .ax-modulo .ax-modcomple2 .ax-modico .ax-incog2 p {
         margin: 0;
         padding: 0;
         color: #747a88;
         font-weight: 700; }
-    .ax-modulo .ax-modcomple .ax-modico2 {
+    .ax-modulo .ax-modcomple .ax-modico .ax-incog, .ax-modulo .ax-modcomple2 .ax-modico .ax-incog {
+      background-color: #303644;
+      text-align: center;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      font-size: 60px;
+      position: relative; }
+      .ax-modulo .ax-modcomple .ax-modico .ax-incog:after, .ax-modulo .ax-modcomple2 .ax-modico .ax-incog:after {
+        content: "";
+        position: absolute;
+        bottom: -9px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #303644; }
+      .ax-modulo .ax-modcomple .ax-modico .ax-incog p, .ax-modulo .ax-modcomple2 .ax-modico .ax-incog p {
+        margin: 0;
+        padding: 0;
+        color: #747a88;
+        font-weight: 700; }
+    .ax-modulo .ax-modcomple .ax-modico2, .ax-modulo .ax-modcomple2 .ax-modico2 {
       text-align: center;
       margin-top: 20px; }
-      .ax-modulo .ax-modcomple .ax-modico2 i {
+      .ax-modulo .ax-modcomple .ax-modico2 i, .ax-modulo .ax-modcomple2 .ax-modico2 i {
         font-size: 50px;
         color: rgba(255, 255, 255, 0.5);
         margin: 10px 0;
         display: block; }
+    .ax-modulo .ax-modcomple .ax-modico3, .ax-modulo .ax-modcomple2 .ax-modico3 {
+      color: white;
+      padding: 0 15px;
+      margin-top: 20px; }
+      .ax-modulo .ax-modcomple .ax-modico3 h4, .ax-modulo .ax-modcomple2 .ax-modico3 h4 {
+        margin-bottom: 10px; }
+      .ax-modulo .ax-modcomple .ax-modico3 ul, .ax-modulo .ax-modcomple2 .ax-modico3 ul {
+        margin: 10px 0; }
+        .ax-modulo .ax-modcomple .ax-modico3 ul li, .ax-modulo .ax-modcomple2 .ax-modico3 ul li {
+          list-style: none;
+          font-weight: 100;
+          font-size: 14px; }
+        .ax-modulo .ax-modcomple .ax-modico3 ul li:before, .ax-modulo .ax-modcomple2 .ax-modico3 ul li:before {
+          content: "o";
+          color: white;
+          width: 10px;
+          font-size: 16px;
+          position: absolute;
+          left: 38px; }
+    .ax-modulo .ax-modcomple .ax-modico4, .ax-modulo .ax-modcomple2 .ax-modico4 {
+      background-color: #da2216;
+      color: white;
+      font-size: 14px;
+      height: 148px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding: 15px; }
+      .ax-modulo .ax-modcomple .ax-modico4 p, .ax-modulo .ax-modcomple2 .ax-modico4 p {
+        margin: 0;
+        padding: 0; }
+      .ax-modulo .ax-modcomple .ax-modico4 .btn-warning, .ax-modulo .ax-modcomple2 .ax-modico4 .btn-warning {
+        width: 100%;
+        height: 48px;
+        margin: 0;
+        color: black;
+        font-weight: 400; }
 
 .ax-arancel {
   background-color: #546378;
@@ -212,7 +286,6 @@ h1, h2, h3, h4 {
         text-align: left;
         margin: 0 auto;
         padding: 0;
-        height: 20px;
         list-style: none; }
         .ax-arancel .tab-content ul li p {
           margin: 0 0 0 10px;
