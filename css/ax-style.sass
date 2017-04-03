@@ -102,6 +102,16 @@ h1, h2, h3, h4
 	background-color: white
 	padding: 80px 0
 
+	.ax-mod-img1
+		display: none
+
+
+	.ax-mod-img2
+		position: absolute
+		top: 145px
+		display: block
+		cursor: pointer
+
 	
 	h2 
 		color: $rojo-cl
@@ -130,6 +140,7 @@ h1, h2, h3, h4
 		background: #303644
 		padding: 15px
 		height: 484px
+		position: relative
 		
 		
 		a 
@@ -138,6 +149,13 @@ h1, h2, h3, h4
 			color: white
 			height: 90px
 			border-top: 1px solid rgba(255,255,255,0.2)
+
+	.ax-md-2
+		background-image: url(../images/bg-mod.jpg)
+		height: 630px
+		background-position: center
+		background-repeat: no-repeat
+		background-color: #f0f1f5
 
 	.ax-md
 		background: #f5f6fa
@@ -173,14 +191,20 @@ h1, h2, h3, h4
 	
 	
 	
-	.ax-modcomple
+	.ax-modcomple, .ax-modcomple2
 		cursor: pointer
+
 
 	.ax-modcomple, .ax-modcomple2,
 		background: #ff563c
-		height: 630px			
-		
+		height: 630px
+		position: relative		
+	
 		.ax-modico
+			position: absolute
+			z-index: 99
+			width: 100%
+
 			.ax-incog2
 				background-color: #303644
 				text-align: center
@@ -486,7 +510,13 @@ h1, h2, h3, h4
 			padding: 10px 30px
 			border-radius: 2px
 
-
+.navbar-shrink
+	background-color: white
+	position: fixed
+	width: 100%
+	margin: 0
+	padding: 10px 0
+	z-index: 99
 
 footer
 	background-color: #292829
@@ -523,6 +553,18 @@ footer
 			
 				i
 					color: white
+
+	
+#ax-mod-compl3, #ax-mod-compl4, .ocultar, .ax-itemmod, .ax-item-mod
+	display: none
+
+.ver
+	display: block !important
+
+
+.opacity
+	opacity: 0.4
+
 
 
 
