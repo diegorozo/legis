@@ -431,7 +431,7 @@ footer {
       footer ul li a i {
         color: white; }
 
-#ax-mod-compl3, #ax-mod-compl4, .ocultar, .ax-itemmod, .ax-item-mod {
+.ocultar {
   display: none; }
 
 .ver {
@@ -439,6 +439,24 @@ footer {
 
 .opacity {
   opacity: 0.4; }
+
+#ax-mod-mercado {
+  display: none; }
+
+#ax-mod-estadistica {
+  display: none; }
+
+#ax-mod-ranking {
+  display: none; }
+
+#ax-mod-comercial {
+  display: none; }
+
+#ax-mod-financiero {
+  display: none; }
+
+#ax-mod-mercadoico, #ax-mod-mercadocont, #ax-mod-estidisticoico, #ax-mod-estidisticocont, #ax-mod-rankingico, #ax-mod-rankingcont, #ax-mod-comercialico, #ax-mod-comercialcont, #ax-mod-financieroico, #ax-mod-financierocont {
+  display: none; }
 
 @media only screen and (max-width: 568px) {
   .ax-header {
