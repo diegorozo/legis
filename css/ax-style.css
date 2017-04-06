@@ -116,6 +116,9 @@ h1, h2, h3, h4 {
   .ax-modulo .ax-md {
     background: #f5f6fa;
     height: 630px; }
+    .ax-modulo .ax-md .ax-md-2 {
+      background-color: #f0f1f5;
+      background-image: none; }
     .ax-modulo .ax-md .ax-itemmod {
       background: #e2e6e9;
       padding: 15px; }
@@ -399,7 +402,8 @@ h1, h2, h3, h4 {
   width: 100%;
   margin: 0;
   padding: 10px 0;
-  z-index: 99; }
+  z-index: 999999;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); }
 
 footer {
   background-color: #292829;
