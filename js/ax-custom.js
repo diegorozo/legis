@@ -1,257 +1,113 @@
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+var axActualPanel = '';
+$(function(){
+    $('.page-scroll').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+            && location.hostname == this.hostname) {
+            var $target = $(this.hash);
+            $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+            if ($target.length) {
+                var targetOffset = $target.offset().top;
+                $('html,body').animate({scrollTop: targetOffset}, 1000);
+                return false;
+            }
+        }
     });
 });
 
-//Modulo Mercado
+function hidePanel(oId){
+    $('#ax-mod-'+oId).removeClass('col-md-9 opacity');
+    $('#ax-mod-'+oId).addClass('col-md-11');
+    $('#ax-mod-'+oId+'ico').removeClass('col-md-3');
+    $('#ax-mod-'+oId+'ico').addClass('col-md-1');
+    $('.ax-modico2').removeClass('ocultar');
+    $('.ax-modico3, .ax-modico4').removeClass('ver');
+    $('#ax-mod-img'+oId).addClass('bounceInDown ver');
 
-$('#ax-mercado').click(function(){
-	$('#ax-mod-estadistica, #ax-mod-ranking, #ax-mod-comercial, #ax-mod-financiero').removeClass();
-	$('#ax-mod-estadistica, #ax-mod-ranking, #ax-mod-comercial, #ax-mod-financiero').addClass('ocultar');	
-	$('#ax-mod-compl2').addClass('ocultar');
-	$('#ax-mod-mercado').removeClass();
-	$('#ax-mod-mercado').addClass('ver');
-	$('#ax-mod-mercado').addClass('col-md-9 animated fadeIn ver ax-md');
-	$('#ax-mod-mercado .ax-md-2').addClass('ver');
-	$('#ax-mod-mercadoico').addClass('ver');
-	$('#ax-mod-estidisticoico, #ax-mod-rankingico, #ax-mod-comercialico, #ax-mod-financieroico').removeClass();
-	$('#ax-mod-estidisticoico, #ax-mod-rankingico, #ax-mod-comercialico, #ax-mod-financieroico').addClass('ocultar');
-	$('#ax-mod-mercadoico').addClass('col-md-1 hidden-xs ax-modcomple');
-	
-  return false;
+    if( $('#ax-collapse'+oId).is(":visible") ){
+        $('.ax-item-mod-'+oId+'1').removeClass('bounceInRight ver');
+        $('.ax-item-mod-'+oId+'2').removeClass('bounceInRight ver');
+        $('.ax-item-mod-'+oId+'3').removeClass('bounceInRight ver');
+        $('.ax-item-mod-'+oId+'4').removeClass('bounceInRight ver');
+        $('.ax-item-mod-'+oId+'6').removeClass('bounceInRight ver');
+        $('.ax-item-mod-'+oId+'5').removeClass('bounceInRight ver');
+        $('.ax-item-mod-'+oId+'1').addClass('ocultar');
+        $('.ax-item-mod-'+oId+'2').addClass('ocultar');
+        $('.ax-item-mod-'+oId+'3').addClass('ocultar');
+        $('.ax-item-mod-'+oId+'4').addClass('ocultar');
+        $('.ax-item-mod-'+oId+'5').addClass('ocultar');
+        $('.ax-item-mod-'+oId+'6').addClass('ocultar');
+        setTimeout(function(){$('#ax-mod-img'+oId).addClass('bounceOutDown ocultar');}, 1100);
+        setTimeout(function(){$('#ax-mod-img'+oId).removeClass('bounceInDown ver');}, 1300);
+    }else{
+        setTimeout(function(){$('.ax-item-mod-'+oId+'1').addClass('bounceInRight ver');}, 100);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'2').addClass('bounceInRight ver');}, 300);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'3').addClass('bounceInRight ver');}, 500);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'4').addClass('bounceInRight ver');}, 700);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'5').addClass('bounceInRight ver');}, 900);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'6').addClass('bounceInRight ver');}, 1100);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'1').removeClass('ocultar');}, 900);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'2').removeClass('ocultar');}, 900);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'3').removeClass('ocultar');}, 900);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'4').removeClass('ocultar');}, 900);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'5').removeClass('ocultar');}, 900);
+        setTimeout(function(){$('.ax-item-mod-'+oId+'6').removeClass('ocultar');}, 1100);
+        setTimeout(function(){$('#ax-mod-img'+oId).addClass('bounceInDown ver');}, 1100);
+        setTimeout(function(){$('#ax-mod-img'+oId).removeClass('bounceOutDown ocultar');}, 1300);
+    }
+}
 
+$('.ax-getId').click(function(){
+    var oId = $(this).attr("id").substring(3);
+    hidePanel(oId);
+    axActualPanel = $(this).attr("id");
+    console.log(oId);
+});
+
+$('.ax-getIdIco').click(function(){
+    var substr = $(this).attr("id").length-3;
+    var oId = $(this).attr("id").substring(7,substr);
+    if( $('.ax-modico3').is(":visible") ){
+        $('#ax-mod-'+oId).removeClass('col-md-9 opacity');
+        $('#ax-mod-'+oId).addClass('col-md-11');
+        $('#ax-mod-'+oId+'ico').removeClass('col-md-3');
+        $('#ax-mod-'+oId+'ico').addClass('col-md-1');
+        $('.ax-modico2').removeClass('ocultar');
+        $('.ax-modico3, .ax-modico4').removeClass('ver');
+    }
+    else{
+        $('#ax-mod-'+oId).removeClass('col-md-11');
+        $('#ax-mod-'+oId).addClass('col-md-9 opacity');
+        $('#ax-mod-'+oId+'ico').removeClass('col-md-1');
+        $('#ax-mod-'+oId+'ico').addClass('col-md-3');
+        $('.ax-modico2').addClass('ocultar');
+        $('.ax-modico3, .ax-modico4').addClass('ver');
+    }
+});
+
+$('.ax-mod-img').click(function(){
+    var oId = $(this).attr("id").substring(10);
+    console.log(oId);
+    $('.ax-mod-img').removeClass('bounceInDown ver');
+});
+
+$('.ax-changear').click(function(){
+    $('.ax-flagChange').removeClass('ax-change-arancel');
+    $('.ax-flagChange').addClass('ax-ama-ara');
+    $('.ax-flagChange',this).addClass('ax-change-arancel');
+    $('.ax-flagChange',this).removeClass('ax-ama-ara');
+});
+
+$(".ax-changear").on('mouseenter', function() {
+    $(this, ".ax-changear").css({"top":"-30px"});
+});
+
+$(".ax-changear").on('mouseleave', function(){
+    $(this, ".ax-changear").css({"top":"0"});
 });
 
 
-$('#ax-mod-mercadoico').click(function(){
-	$('#ax-mod-mercado').removeClass();
-	$('#ax-mod-mercado').addClass('ver');
-	$('#ax-mod-mercado').addClass('col-md-6 ax-md opacity');
-	$('#ax-mod-mercadoico').removeClass();
-	$('#ax-mod-mercadoico').addClass('ocultar');
-	$('#ax-mod-mercadocont').removeClass();
-	$('#ax-mod-mercadocont').addClass('ver col-md-4 ax-modcomple2 animated fadeIn');
-	
-  return false;
+$('.ax-principalMenu>a').click(function(){
+    $('.ax-principalMenu').removeClass('active');
+    $(this, 'a').parent().addClass('active');
 });
-
-$('#ax-mod-mercadocont').click(function(){
-	$('#ax-mod-mercadocont').removeClass();
-	$('#ax-mod-mercadocont').addClass('ocultar');
-	$('#ax-mod-mercado').removeClass();
-	$('#ax-mod-mercado').addClass('ver');
-	$('#ax-mod-mercado').addClass('col-md-9 ax-md');
-	$('#ax-mod-mercadoico').removeClass();
-	$('#ax-mod-mercadoico').addClass('col-md-1 hidden-xs ax-modcomple ver animated fadeIn');
-
-  return false;
-});
-
-
-//Modulo Mercado
-
-
-
-
-
-
-//Modulo Estadisticos
-
-
-$('#ax-estadistica').click(function(){
-	$('#ax-mod-mercado, #ax-mod-ranking, #ax-mod-comercial, #ax-mod-financiero').removeClass();
-	$('#ax-mod-mercado, #ax-mod-ranking, #ax-mod-comercial, #ax-mod-financiero').addClass('ocultar');
-	$('#ax-mod-compl2').addClass('ocultar');
-	$('#ax-mod-estadistica').removeClass();
-	$('#ax-mod-estadistica').addClass('ver');
-	$('#ax-mod-estadistica').addClass('col-md-9 animated fadeIn ver ax-md');
-	$('#ax-mod-estidisticoico').addClass('ver');
-	$('#ax-mod-mercadoico, #ax-mod-rankingico, #ax-mod-comercialico, #ax-mod-financieroico').removeClass();
-	$('#ax-mod-mercadoico, #ax-mod-rankingico, #ax-mod-comercialico, #ax-mod-financieroico').addClass('ocultar');
-	$('#ax-mod-estidisticoico').addClass('col-md-1 hidden-xs ax-modcomple');
-	
-	
-	
-	
-	
-  return false;
-
-});
-
-$('#ax-mod-estidisticoico').click(function(){
-	$('#ax-mod-estadistica').removeClass();
-	$('#ax-mod-estadistica').addClass('ver');
-	$('#ax-mod-estadistica').addClass('col-md-6 ax-md opacity');
-	$('#ax-mod-estidisticoico').removeClass();
-	$('#ax-mod-estidisticoico').addClass('ocultar');
-	$('#ax-mod-estidisticocont').removeClass();
-	$('#ax-mod-estidisticocont').addClass('ver col-md-4 ax-modcomple2 animated fadeIn');
-	
-  return false;
-});
-
-$('#ax-mod-estidisticocont').click(function(){
-	$('#ax-mod-estidisticocont').removeClass();
-	$('#ax-mod-estidisticocont').addClass('ocultar');
-	$('#ax-mod-estadistica').removeClass();
-	$('#ax-mod-estadistica').addClass('ver');
-	$('#ax-mod-estadistica').addClass('col-md-9 ax-md');
-	$('#ax-mod-estidisticoico').removeClass();
-	$('#ax-mod-estidisticoico').addClass('col-md-1 hidden-xs ax-modcomple ver animated fadeIn');
-
-  return false;
-});
-
-//Modulo Estadisticos
-
-
-
-
-//Modulo Ranking
-
-
-$('#ax-ranking').click(function(){
-	$('#ax-mod-mercado, #ax-mod-estadistica, #ax-mod-comercial, #ax-mod-financiero').removeClass();
-	$('#ax-mod-mercado, #ax-mod-estadistica, #ax-mod-comercial, #ax-mod-financiero').addClass('ocultar');
-	$('#ax-mod-compl2').addClass('ocultar');
-	$('#ax-mod-ranking').removeClass();
-	$('#ax-mod-ranking').addClass('ver');
-	$('#ax-mod-ranking').addClass('col-md-9 animated fadeIn ver ax-md');
-	$('#ax-mod-rankingico').addClass('ver');
-	$('#ax-mod-mercadoico, #ax-mod-estidisticoico, #ax-mod-comercialico, #ax-mod-financieroico').removeClass();
-	$('#ax-mod-mercadoico, #ax-mod-estidisticoico, #ax-mod-comercialico, #ax-mod-financieroico').addClass('ocultar');
-	$('#ax-mod-rankingico').addClass('col-md-1 hidden-xs ax-modcomple');
-
-	
-  return false;
-
-});
-
-$('#ax-mod-rankingico').click(function(){
-	$('#ax-mod-ranking').removeClass();
-	$('#ax-mod-ranking').addClass('ver');
-	$('#ax-mod-ranking').addClass('col-md-6 ax-md opacity');
-	$('#ax-mod-rankingico').removeClass();
-	$('#ax-mod-rankingico').addClass('ocultar');
-	$('#ax-mod-rankingcont').removeClass();
-	$('#ax-mod-rankingcont').addClass('ver col-md-4 ax-modcomple2 animated fadeIn');
-	
-  return false;
-});
-
-$('#ax-mod-rankingcont').click(function(){
-	$('#ax-mod-rankingcont').removeClass();
-	$('#ax-mod-rankingcont').addClass('ocultar');
-	$('#ax-mod-ranking').removeClass();
-	$('#ax-mod-ranking').addClass('ver');
-	$('#ax-mod-ranking').addClass('col-md-9 ax-md');
-	$('#ax-mod-rankingico').removeClass();
-	$('#ax-mod-rankingico').addClass('col-md-1 hidden-xs ax-modcomple ver animated fadeIn');
-
-  return false;
-});
-
-
-
-//Modulo Comercial
-
-$('#ax-comercial').click(function(){
-	$('#ax-mod-mercado, #ax-mod-estadistica, #ax-mod-ranking, #ax-mod-financiero').removeClass();
-	$('#ax-mod-mercado, #ax-mod-estadistica, #ax-mod-ranking, #ax-mod-financiero').addClass('ocultar');
-	$('#ax-mod-compl2').addClass('ocultar');
-	$('#ax-mod-comercial').removeClass();
-	$('#ax-mod-comercial').addClass('ver');
-	$('#ax-mod-comercial').addClass('col-md-9 animated fadeIn ver ax-md');
-	$('#ax-mod-comercialico').addClass('ver');
-	$('#ax-mod-mercadoico, #ax-mod-estidisticoico, #ax-mod-rankingico, #ax-mod-financieroico').removeClass();
-	$('#ax-mod-mercadoico, #ax-mod-estidisticoico, #ax-mod-rankingico, #ax-mod-financieroico').addClass('ocultar');
-	$('#ax-mod-comercialico').addClass('col-md-1 hidden-xs ax-modcomple');
-
-	
-  return false;
-
-});
-
-$('#ax-mod-comercialico').click(function(){
-	$('#ax-mod-comercial').removeClass();
-	$('#ax-mod-comercial').addClass('ver');
-	$('#ax-mod-comercial').addClass('col-md-6 ax-md opacity');
-	$('#ax-mod-comercialico').removeClass();
-	$('#ax-mod-comercialico').addClass('ocultar');
-	$('#ax-mod-comercialcont').removeClass();
-	$('#ax-mod-comercialcont').addClass('ver col-md-4 ax-modcomple2 animated fadeIn');
-	
-  return false;
-});
-
-$('#ax-mod-comercialcont').click(function(){
-	$('#ax-mod-comercialcont').removeClass();
-	$('#ax-mod-comercialcont').addClass('ocultar');
-	$('#ax-mod-comercial').removeClass();
-	$('#ax-mod-comercial').addClass('ver');
-	$('#ax-mod-comercial').addClass('col-md-9 ax-md');
-	$('#ax-mod-comercialico').removeClass();
-	$('#ax-mod-comercialico').addClass('col-md-1 hidden-xs ax-modcomple ver animated fadeIn');
-
-  return false;
-});
-
-
-//Modulo Comercial
-
-
-
-
-//Modulo Financiero
-
-$('#ax-financiero').click(function(){
-	$('#ax-mod-mercado, #ax-mod-estadistica, #ax-mod-ranking, #ax-mod-comercial').removeClass();
-	$('#ax-mod-mercado, #ax-mod-estadistica, #ax-mod-ranking, #ax-mod-comercial').addClass('ocultar');
-	$('#ax-mod-compl2').addClass('ocultar');
-	$('#ax-mod-financiero').removeClass();
-	$('#ax-mod-financiero').addClass('ver');
-	$('#ax-mod-financiero').addClass('col-md-9 animated fadeIn ver ax-md');
-	$('#ax-mod-financieroico').addClass('ver');
-	$('#ax-mod-mercadoico, #ax-mod-estidisticoico, #ax-mod-rankingico, #ax-mod-comercialico').removeClass();
-	$('#ax-mod-mercadoico, #ax-mod-estidisticoico, #ax-mod-rankingico, #ax-mod-comercialico').addClass('ocultar');
-	$('#ax-mod-financieroico').addClass('col-md-1 hidden-xs ax-modcomple');
-	
-  return false;
-
-});
-
-$('#ax-mod-financieroico').click(function(){
-	$('#ax-mod-financiero').removeClass();
-	$('#ax-mod-financiero').addClass('ver');
-	$('#ax-mod-financiero').addClass('col-md-6 ax-md opacity');
-	$('#ax-mod-financieroico').removeClass();
-	$('#ax-mod-financieroico').addClass('ocultar');
-	$('#ax-mod-financierocont').removeClass();
-	$('#ax-mod-financierocont').addClass('ver col-md-4 ax-modcomple2 animated fadeIn');
-	
-  return false;
-});
-
-$('#ax-mod-financierocont').click(function(){
-	$('#ax-mod-financierocont').removeClass();
-	$('#ax-mod-financierocont').addClass('ocultar');
-	$('#ax-mod-financiero').removeClass();
-	$('#ax-mod-financiero').addClass('ver');
-	$('#ax-mod-financiero').addClass('col-md-9 ax-md');
-	$('#ax-mod-financieroico').removeClass();
-	$('#ax-mod-financieroico').addClass('col-md-1 hidden-xs ax-modcomple ver animated fadeIn');
-
-  return false;
-});
-
-//Modulo Financiero
-
-
-
-
-

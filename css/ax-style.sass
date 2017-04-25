@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700')
 
+@font-face
+    font-family: 'trade-gothic-lt-std4'
+
+    src: url('../fonts/trade-gothic-lt-std4.eot')
+    src: url('../fonts/trade-gothic-lt-std4.eot?#iefix') format('embedded-opentype'), url('../fonts/trade-gothic-lt-std4.woff') format('woff'), url('../fonts/trade-gothic-lt-std4.ttf') format('truetype'), url('../fonts/trade-gothic-lt-std4.svg#glyphicons_halflingsregular') format('svg')
+
 $azul-os: #273367
 $azul-cl: #546378
 $rojo-os: #7c1216
@@ -7,630 +13,669 @@ $rojo-cl: #ec6569
 $gris-os: #c4c4c4
 $gris-cl: #f4f4f4
 $amarillo-os: #ffb43d
-$amarillo-cl: #fec85e
+$amarillo-cl: #f2c46e
 $naranja: #f57858
 
 $texto: #6a6a6a
 
+*
+    margin: 0
+    padding: 0
 
 body
-	font-family: 'Source Sans Pro', sans-serif
-	font-size: 16px
-	color: $texto
-	position: relative
-
-
-h1, h2, h3, h4
-	font-family: 'Source Sans Pro', sans-serif
-	padding: 0
-	margin: 0 
-
-.ax-header
-	
-	margin: 20px 0 
-	
-	h1
-		margin: 0
-	.navbar
-		margin-bottom: 0px
-
-	.navbar-default
-		background-color: white !important
-		border-color: white !important
-		
-		li
-			a
-				color: $azul-os
-				text-transform: uppercase
-				font-weight: 100
-				font-size: 14px
-	
-
-.ax-slide
-	.carousel-caption
-		width: 70%
-		bottom: 100px
-
-		img
-			width: 60%
-			margin: auto
-		
-		.btn-primary
-			border: none
-			background-color: $rojo-os
-			font-weight: 100
-			font-size: 14px
-			padding: 10px 30px
-			border-radius: 2px
-
-		p
-			color: #273367
-			text-shadow: none
-			font-size: 18px
-			font-weight: 100
-			margin: 50px 0
-
-	.left, .right
-		justify-content: center
-		align-content: center
-		align-items: center
-		display: flex
-	
-		i 
-			color: $rojo-os
-
-	
-.ax-conoce
-	background-color: $gris-cl
-	padding: 80px 0
-	text-align: center
-	
-	h2 
-		color: $rojo-os
-		font-weight: 100
-		margin-bottom: 40px
-
-	h2:after
-		content: ""
-		display: block
-		width: 80px
-		margin: 25px auto 0 auto
-		border-bottom: 2px solid  $rojo-os
-
-
-
-.ax-modulo
-	background-color: white
-	padding: 80px 0
-
-	.ax-mod-img1
-		display: none
-
-
-	.ax-mod-img2
-		position: absolute
-		top: 145px
-		display: block
-		cursor: pointer
-
-	
-	h2 
-		color: $rojo-cl
-		font-weight: 100
-		margin-bottom: 40px
-		text-align: center
-
-	h2:after
-		content: ""
-		display: block
-		width: 80px
-		margin: 25px auto 0 auto
-		border-bottom: 2px solid $rojo-cl
-
-	.ax-solicita
-		background: #444a58
-		padding: 15px
-		color: white
-		font-size: 13px
-
-		
-		.btn-success
-			width: 100%
-
-	.ax-mod-cont
-		background: #303644
-		padding: 15px
-		height: 484px
-		position: relative
-		
-		
-		a 
-			display: flex
-			align-items: center
-			color: white
-			height: 90px
-			border-top: 1px solid rgba(255,255,255,0.2)
-
-	.ax-md-2
-		background-image: url(../images/bg-mod.jpg)
-		height: 630px
-		background-position: center
-		background-repeat: no-repeat
-		background-color: #f0f1f5
-		
-
-	.ax-md
-		background: #f5f6fa
-		height: 630px
-				
-		.ax-md-2
-			background-color: #f0f1f5
-			background-image: none
-
-		.ax-itemmod
-			background: #e2e6e9
-			padding: 15px
-
-			h4
-				font-weight: 700
-				margin: 0
-				padding: 0
-			
-			p 
-				font-size: 13px
-	
-		.ax-item-mod
-			background-color: white
-			padding: 10px
-			margin: 24px 15px
-			border-radius: 5px
-			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2)
-
-			h4
-				font-weight: 700
-				margin: 0
-				padding: 0
-				font-size: 14px
-
-			p 
-				font-size: 12px
-	
-	
-	
-	.ax-modcomple, .ax-modcomple2
-		cursor: pointer
-
-
-	.ax-modcomple, .ax-modcomple2,
-		background: #ff563c
-		height: 630px
-		position: relative		
-	
-		.ax-modico
-			position: absolute
-			z-index: 99
-			width: 100%
-
-			.ax-incog2
-				background-color: #303644
-				text-align: center
-				height: 70px
-				display: flex
-				align-items: center
-				align-content: center
-				justify-content: center
-				font-size: 60px
-				position: relative
-	
-				&:after
-					content: ""
-					position: absolute
-					bottom: -9px
-					width: 0
-					height: 0
-					border-left: 10px solid transparent
-					border-right: 10px solid transparent
-					border-top: 10px solid #303644
-	
-				p
-					margin: 0
-					padding: 0
-					color: #747a88
-					font-weight: 700
-	
-			.ax-incog
-				background-color: #303644
-				text-align: center
-				height: 70px
-				display: flex
-				align-items: center
-				align-content: center
-				justify-content: center
-				font-size: 60px
-				position: relative
-
-	
-				&:after
-					content: ""
-					position: absolute
-					bottom: -9px
-					width: 0
-					height: 0
-					border-left: 10px solid transparent
-					border-right: 10px solid transparent
-					border-top: 10px solid #303644
-
-				
-	
-				p
-					margin: 0
-					padding: 0
-					color: #747a88
-					font-weight: 700
-		
-		.ax-modico2
-			text-align: center
-			margin-top: 20px
-			
-			i
-				font-size: 50px
-				color: rgba(255,255,255,0.5)
-				margin: 10px 0
-				display: block
-		
-		.ax-modico3
-			color: white
-			padding: 0 15px
-			margin-top: 20px
-			
-			h4
-				margin-bottom: 10px
-			
-			ul
-				margin: 10px 0
-				
-				li
-					list-style: none
-					font-weight: 100
-					font-size: 14px
-				
-				li:before
-					content: "o"
-					color: white
-					width: 10px
-					font-size: 16px
-					position: absolute
-					left: 38px
-	
-	
-		.ax-modico4
-			background-color: #da2216
-			color: white
-			font-size: 14px
-			height: 148px
-			display: flex
-			flex-wrap: wrap
-			margin-top: 20px
-			padding: 15px
-			
-			p
-				margin: 0
-				padding: 0
-			
-			.btn-warning
-				width: 100%
-				height: 48px
-				margin: 0
-				color: black
-				font-weight: 400
-				
-	
-
-.ax-arancel
-	background-color: $azul-cl
-	padding: 80px 0
-	text-align: center
-
-
-	ul
-		li
-			list-style: none
-
-			a
-				display: inline-block
-				text-decoration: none
-
-
-	p
-		color: white
-		font-weight: 100
-		font-size: 14px
-		margin: 45px 0
-
-	
-	h2 
-		color: white
-		font-weight: 100
-		margin-bottom: 40px
-
-	h2:after
-		content: ""
-		display: block
-		width: 80px
-		margin: 25px auto 0 auto
-		border-bottom: 2px solid  $amarillo-cl
-
-	h4
-		color: white
-		font-size: 16px
-		margin: 25px 0
-
-	.ax-ama-ara
-		background-color: white
-		display: flex
-		align-items: center
-		align-content: center
-		justify-content: center
-		padding: 10px
-		text-align: center
-		height: 150px
-		margin: 10px 0 0 0 
-		
-		span
-			border-radius: 50%
-			width: 70px
-			height: 70px
-			background-color: $amarillo-cl
-			display: table
-			color: white
-			align-items: center
-			align-content: center
-			justify-content: center
-			font-size: 50px
-			font-weight: 100
-			
-
-		p
-			text-align: left
-			padding: 0 10px
-			font-size: 16px
-			color: $azul-cl
-	
-	.tab-content
-		margin-top: 60px
-		ul
-			margin: 30px 0 90px 0
-
-			li
-				text-align: left
-				margin: 0 auto
-				padding: 0
-				list-style: none
-				
-				p
-					margin: 0 0 0 10px
-					padding: 0 0 0 10px
-	
-					&:before
-						content: "•"
-						color: $amarillo-cl
-						width: 10px
-						font-size: 16px
-						margin: 0 10px 0 0
-						padding: 0 10px 0 0
-		
-		.ax-norma
-			background: #3A4558
-			padding: 10px 40px
-			height: 250px
-
-			p
-				margin: 10px 0
-				padding: 0	
-
-			ul
-				margin: 0
-				padding: 0
-	
-				p
-					margin: 0
-	
-
-.ax-noticias
-	background-color: white
-	padding: 80px 0
-	text-align: center
-	
-	h2 
-		color: $naranja
-		font-weight: 400
-		margin-bottom: 40px
-
-	h2:after
-		content: ""
-		display: block
-		width: 80px
-		margin: 25px auto 0 auto
-		border-bottom: 2px solid  $naranja
-
-	.ax-not
-		border: 1px solid $gris-cl
-		border-radius: 0 0 10px 10px
-		padding: 30px
-
-		h4
-			font-size: 16px
-			font-weight: 400
-			margin-bottom: 20px
-		p
-			font-size: 14px
-			font-weight: 100
-
-
-		.btn-primary
-			border: none
-			background-color: $naranja
-			font-weight: 100
-			font-size: 14px
-			padding: 10px 30px
-			border-radius: 2px
-			width: 100%
-
-
-.ax-formulario
-	background-image: url(../images/formulario.jpg)
-	background-repeat: no-repeat
-	background-size: 100%
-	padding: 80px 0
-	
-	.ax-fondo
-		background-color: white
-		padding: 20px 0 40px 0 
-
-		h2
-			margin: 30px 0
-			color: $azul-os
-
-		label, .relativismo, input
-			font-weight: 100
-			color: #6C6D6C
-		
-		.ax-selec
-			margin-bottom: 20px
-			label
-				font-size: 14px
-				text-transform: uppercase
-				margin-right: 10px
-	
-	
-		.acepto
-			label
-				font-size: 12px
-				
-
-		.btn-primary
-			border: none
-			background-color: $azul-os
-			font-weight: 100
-			font-size: 14px
-			padding: 10px 30px
-			border-radius: 2px
-
-.navbar-shrink
-	background-color: white
-	position: fixed
-	width: 100%
-	margin: 0
-	padding: 10px 0
-	z-index: 999999
-	box-shadow: 0px 1px 2px rgba(0,0,0,0.2)
-
-footer
-	background-color: #292829
-	color: white
-	font-weight: 100
-	display: flex
-	align-items: center
-	align-content: center
-	justify-content: center
-	width: 100%
-	height: 180px
-
-	p
-		font-size: 14px
-		padding: 0px
-		margin: 0px
-
-	ul
-		li
-			display: inline-block
-			vertical-align: top
-			
-			a
-				border: 1px solid white
-				width: 30px
-				height: 30px
-				display: flex
-				text-align: center
-				border-radius: 50%
-				align-items: center
-				align-content: center
-				justify-content: center
-	
-			
-				i
-					color: white
-
-	
-.ocultar
-	display: none
-
-.ver
-	display: block !important
-
-
-.opacity
-	opacity: 0.4
-
-
-
-
-#ax-mod-mercado
-	display: none
-
-
-#ax-mod-estadistica
-	display: none
-
-
-#ax-mod-ranking
-	display: none
-
-
-#ax-mod-comercial
-	display: none
-
-
-#ax-mod-financiero
-	display: none
-
-
-
-#ax-mod-mercadoico, #ax-mod-mercadocont, #ax-mod-estidisticoico, #ax-mod-estidisticocont, #ax-mod-rankingico, #ax-mod-rankingcont, #ax-mod-comercialico, #ax-mod-comercialcont, #ax-mod-financieroico, #ax-mod-financierocont
-	display: none
+    font-family: 'trade-gothic-lt-std4'
+    font-size: 16px
+    color: $texto
+    position: relative
+
+    h1, h2, h3, h4
+        font-family: 'trade-gothic-lt-std4'
+        padding: 0
+        margin: 0
+
+    .ax-moduleIco
+        border-radius: 30px
+        background: $amarillo-cl
+
+    .ax-notDesktop
+        display: none
+
+    .ax-notMobile
+        display: block
+
+    header
+        padding: 18px 0
+        background: white
+
+        h1
+            margin: 0
+        .navbar
+            margin-bottom: 0px
+        .navbar-default
+            background-color: white !important
+            border-color: white !important
+
+            li
+                a
+                    color: $azul-os
+                    text-transform: uppercase
+                    font-weight: 100
+                    font-size: 14px
+
+    section
+        padding: 180px 0 0 0
+
+    #myCarousel
+        padding: 90px 0 0 0
+
+        .carousel-caption
+            width: 70%
+            bottom: 100px
+
+            img
+                width: 60%
+                margin: auto
+
+            .btn-primary
+                border: none
+                background-color: $rojo-os
+                font-weight: 100
+                font-size: 14px
+                padding: 10px 30px
+                border-radius: 2px
+
+            p
+                color: #273367
+                text-shadow: none
+                font-size: 18px
+                font-weight: 100
+                margin: 50px 0
+
+        .left, .right
+            justify-content: center
+            align-content: center
+            align-items: center
+            display: flex
+
+            i
+                color: $rojo-os
+
+    .ax-conoce
+        background-color: $gris-cl
+        text-align: center
+
+        h2
+            color: $rojo-os
+            font-weight: 100
+            margin-bottom: 40px
+
+        h2:after
+            content: ""
+            display: block
+            width: 80px
+            margin: 25px auto 0 auto
+            border-bottom: 2px solid  $rojo-os
+
+    //refactor
+    .ax-modulo
+        background-color: white
+        .container
+            .row
+                h2
+                    color: $rojo-cl
+                    font-weight: 100
+                    margin-bottom: 40px
+                    text-align: center
+                    &:after
+                        content: ""
+                        display: block
+                        width: 80px
+                        margin: 25px auto 0 auto
+                        border-bottom: 2px solid $rojo-cl
+                .ax-sectionHeiht
+                    min-height: 730px
+                    background: #303644
+                    padding: 0
+                    overflow: hidden
+                    .row
+                        margin: 0
+                        cursor: pointer
+                        .ax-solicita
+                            background: #444a58
+                            padding: 15px
+                            color: white
+                            font-size: 13px
+                            .btn-success
+                                width: 100%
+                        .ax-lateralMenu
+                            color: white
+                            padding: 10px
+                            img, p
+                                display: inline-block
+                                vertical-align: middle
+                            p
+                                width: 50%
+                    hr
+                        margin: 14px auto
+                        width: 85%
+                        border-top: 1px solid #444a58
+                    .ax-mod-img
+                        position: absolute
+                        z-index: 20
+                        top: 147px
+                        display: none
+                        overflow: hidden
+                        right: 0
+                    .panel-group
+                        margin: 0px
+                        .panel
+                            border-radius: 0
+                            border: none
+                            .panel-heading
+                                background: #303644
+                                color: white
+                                /*Se oculta en desktop*/
+                                a
+                                    color: white
+                                    text-decoration: none
+
+                                    &:hover
+                                        color: white
+                                        text-decoration: none
+                                    img,p
+                                        display: inline-block
+                                        vertical-align: middle
+                            .panel-body
+                                background: #f0f1f5
+                                border: none
+                                padding: 0
+                                overflow: hidden
+                                .col-md-1, .col-md-3
+                                    background: #ff563c
+                                    min-height: 730px
+                                .col-md-11, .col-md-9, .col-md-1, .col-md-3
+                                    padding: 0
+                                    .row
+                                        .ax-itemmod
+                                            background: #e2e6e9
+                                            padding: 15px
+                                            h4
+                                                font-weight: 700
+                                                margin: 0
+                                                padding: 0
+                                            p
+                                                font-size: 13px
+                                        .media
+                                            background-color: white
+                                            padding: 10px
+                                            margin: 20px 15px 0px 15px
+                                            border-radius: 5px
+                                            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2)
+                                            h4
+                                                font-weight: 700
+                                                margin: 0
+                                                padding: 0
+                                                font-size: 14px
+                                            p
+                                                font-size: 12px
+                                        .ax-incog
+                                            background-color: #303644
+                                            text-align: center
+                                            height: 70px
+                                            display: flex
+                                            align-items: center
+                                            align-content: center
+                                            justify-content: center
+                                            font-size: 60px
+                                            position: relative
+                                            &:after
+                                                content: ""
+                                                position: absolute
+                                                bottom: -9px
+                                                width: 0
+                                                height: 0
+                                                border-left: 10px solid transparent
+                                                border-right: 10px solid transparent
+                                                border-top: 10px solid #303644
+                                            p
+                                                margin: 0
+                                                padding: 0
+                                                color: #747a88
+                                                font-weight: 700
+
+                                        .ax-modico2
+                                            text-align: center
+                                            margin-top: 20px
+
+                                            i
+                                                font-size: 50px
+                                                color: rgba(255,255,255,0.5)
+                                                margin: 15px 0
+                                                display: block
+                                        .ax-modico3
+                                            color: white
+                                            padding: 0 15px
+                                            margin-top: 20px
+                                            display: none
+
+                                            h4
+                                                margin-bottom: 10px
+
+                                            ul
+                                                margin: 10px 0
+
+                                                li
+                                                    list-style: none
+                                                    font-weight: 100
+                                                    font-size: 14px
+                                                    padding-left: 20px
+                                                    &:before
+                                                        content: "o"
+                                                        color: white
+                                                        width: 10px
+                                                        font-size: 16px
+                                                        position: absolute
+                                                        left: 38px
+                                                        margin-left: -18px
+                                        .ax-modico4
+                                            background-color: #da2216
+                                            color: white
+                                            font-size: 14px
+                                            height: 148px
+                                            display: flex
+                                            flex-wrap: wrap
+                                            margin-top: 20px
+                                            padding: 15px
+                                            display: none
+
+                                            p
+                                                margin: 0
+                                                padding: 0
+
+                                            .btn-warning
+                                                width: 100%
+                                                height: 48px
+                                                margin: 0
+                                                color: black
+                                                font-weight: 400
+                        .panel+.panel
+                            margin: 0
+
+                .ax-sectionHeiht:nth-child(2)
+                    background: #f0f1f5
+                    background-image: url(../images/bg-mod.jpg)
+                    background-repeat: no-repeat
+                    background-position: 313px 300px
+
+    .ax-arancel
+        background-color: $azul-cl
+        text-align: center
+
+        ul
+            li
+                list-style: none
+            .ax-changear
+                transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1)
+
+                a
+                    display: inline-block
+                    text-decoration: none
+
+        p
+            color: white
+            font-weight: 100
+            font-size: 14px
+            margin: 45px 0
+
+        h2
+            color: white
+            font-weight: 100
+            margin-bottom: 40px
+
+        h2:after
+            content: ""
+            display: block
+            width: 80px
+            margin: 25px auto 0 auto
+            border-bottom: 2px solid  $amarillo-cl
+
+        h4
+            color: white
+            font-size: 16px
+            margin: 25px 0
+
+        .ax-ama-ara
+            background-color: white
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: center
+            padding: 10px
+            text-align: center
+            height: 150px
+            margin: 10px 0 0 0
+
+            span
+                border-radius: 50%
+                width: 70px
+                height: 70px
+                background-color: $amarillo-cl
+                display: table
+                color: white
+                align-items: center
+                align-content: center
+                justify-content: center
+                font-size: 50px
+                font-weight: 100
+
+            p
+                text-align: left
+                padding: 0 30px
+                font-size: 16px
+                color: $azul-cl
+
+        .tab-content
+            margin-top: 60px
+
+            .tab-pane
+                margin: 0 auto
+                width: 600px
+
+                ul
+                    margin: 30px 0 90px 0
+
+                    li
+                        text-align: left
+                        margin: 0 auto
+                        padding: 0
+                        list-style: none
+
+                        p
+                            margin: 0 0 0 10px
+                            padding: 0 0 0 10px
+
+                            &:before
+                                content: "•"
+                                color: $amarillo-cl
+                                width: 10px
+                                font-size: 16px
+                                margin: 0 10px 0 0
+                                padding: 0 10px 0 0
+
+            .ax-norma
+                background: #3A4558
+                padding: 10px 40px
+                height: 250px
+                text-align: left
+
+                p
+                    margin: 10px 0
+                    padding: 0
+
+                ul
+                    margin: 0
+                    padding: 0
+
+                    p
+                        margin: 0
+                        &:before
+                            content: "•"
+                            margin-right: 15px
+                            color: $amarillo-cl
+        .ax-change-arancel
+            background-color: $amarillo-cl
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: center
+            padding: 10px
+            text-align: center
+            height: 150px
+            margin: 10px 0 0 0
+
+            &:before
+                content: "";
+                position: absolute;
+                bottom: -30px;
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 30px solid $amarillo-cl;
+
+            span
+                border-radius: 50%
+                background-color: #ffffff
+                color: $amarillo-cl
+                width: 70px
+                height: 70px
+                display: table
+                align-items: center
+                align-content: center
+                justify-content: center
+                font-size: 50px
+                font-weight: 100
+
+            p
+                text-align: left
+                padding: 0 30px
+                font-size: 16px
+                color: #ffffff
+
+    .ax-noticias
+        background-color: white
+        text-align: center
+
+        h2
+            color: $naranja
+            font-weight: 400
+            margin-bottom: 40px
+
+        h2:after
+            content: ""
+            display: block
+            width: 80px
+            margin: 25px auto 0 auto
+            border-bottom: 2px solid  $naranja
+
+        .ax-not
+            border: 1px solid $gris-cl
+            border-radius: 0 0 10px 10px
+            padding: 30px
+
+            h4
+                font-size: 16px
+                font-weight: 400
+                margin-bottom: 20px
+            p
+                font-size: 14px
+                font-weight: 100
+
+
+            .btn-primary
+                border: none
+                background-color: $naranja
+                font-weight: 100
+                font-size: 14px
+                padding: 10px 30px
+                border-radius: 2px
+                width: 100%
+
+
+    .ax-formulario
+        background-image: url(../images/formulario.jpg)
+        background-repeat: no-repeat
+        background-size: 100%
+        .ax-fondo
+            background-color: white
+            padding: 20px 0 40px 0
+
+            h2
+                margin: 30px 0
+                color: $azul-os
+
+            label, .relativismo, input
+                font-weight: 100
+                color: #6C6D6C
+
+            .ax-selec
+                margin-bottom: 20px
+                label
+                    font-size: 14px
+                    text-transform: uppercase
+                    margin-right: 10px
+
+            .acepto
+                label
+                    font-size: 12px
+
+
+            .btn-primary
+                border: none
+                background-color: $azul-os
+                font-weight: 100
+                font-size: 14px
+                padding: 10px 30px
+                border-radius: 2px
+
+    .navbar-shrink
+        background-color: white
+        position: fixed
+        width: 100%
+        margin: 0
+        padding: 10px 0
+        z-index: 999999
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.2)
+
+    footer
+        background-color: #292829
+        color: white
+        font-weight: 100
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: center
+        width: 100%
+        min-height: 180px
+
+        p
+            font-size: 14px
+            padding: 0px
+            margin: 0px
+
+        ul
+            li
+                display: inline-block
+                vertical-align: top
+
+                a
+                    border: 1px solid white
+                    width: 30px
+                    height: 30px
+                    display: flex
+                    text-align: center
+                    border-radius: 50%
+                    align-items: center
+                    align-content: center
+                    justify-content: center
+
+
+                    i
+                        color: white
+
+
+    .ocultar
+        display: none
+
+    .ver
+        display: block !important
+
+
+    .opacity
+        opacity: 0.4
 
 
 @media only screen and (max-width: 768px)
-	
+    body
+        .navbar-brand
+            float: left
+            padding: 0 15px
+            font-size: 18px
+            line-height: 20px
+            height: 50px
+            width: 16%
+        .ax-notDesktop
+            display: block
+        .ax-notDesktop
+            display: block
+
+        .ax-notMobile
+            display: none
+
+        .ax-modulo .container .row .ax-sectionHeiht
+            min-height: 380px
+            .panel-group .panel .panel-body .col-md-1
+                min-height: 300px
+
+        footer
+            text-align: center
+            padding: 20px
+
+            .co-md3, .col-md-6, .col-md-3
+                margin-top: 10px
 
 @media only screen and (max-width: 568px)
-	
-	.ax-header
-		margin: 50px 0
-		
-		.navbar-brand
-			position: absolute
-			top: -30px
-			
-			img
-				width: 35%
-		
-		.navbar-collapse
-			margin-top: 30px
+    body
+        .navbar-brand
+            float: left
+            padding: 0 15px
+            font-size: 18px
+            line-height: 20px
+            height: 50px
+            width: 16%
+        .ax-notDesktop
+            display: block
 
-	h2
-		font-size: 45px
-	
-	.ax-noticias
-		.ax-noti
-			margin-top: 30px
+        .ax-notMobile
+            display: none
+        .ax-modulo .container .row .ax-sectionHeiht
+            min-height: 380px
+
+            .panel-group .panel .panel-body .col-md-1
+                min-height: 300px
+        .header
+            margin: 50px 0
+
+            .navbar-brand
+                position: absolute
+                top: -30px
+
+                img
+                    width: 35%
+
+            .navbar-collapse
+                margin-top: 30px
+
+        h2
+            font-size: 45px
+
+        .ax-noticias
+            .ax-noti
+                margin-top: 30px
+
+        footer
+            text-align: center
+            padding: 20px
+
+            .co-md3, .col-md-6, .col-md-3
+                margin-top: 10px
 
 
-@media only screen and (max-width: 414px)
-	
-	
-	
-	
-	
-	
-	
+//@media only screen and (max-width: 414px)
+
+
+
+
+
+
+
