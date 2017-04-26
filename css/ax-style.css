@@ -4,7 +4,7 @@
 
 * { margin: 0; padding: 0; }
 
-body { font-family: 'trade-gothic-lt-std4'; font-size: 16px; color: #6a6a6a; position: relative; }
+body { font-family: 'trade-gothic-lt-std4'; font-size: 1em; color: #6a6a6a; position: relative; /*#myCarousel*/ }
 
 body h1, body h2, body h3, body h4 { font-family: 'trade-gothic-lt-std4'; padding: 0; margin: 0; }
 
@@ -26,19 +26,7 @@ body header .navbar-default li a { color: #273367; text-transform: uppercase; fo
 
 body section { padding: 180px 0 0 0; }
 
-body #myCarousel { padding: 90px 0 0 0; }
-
-body #myCarousel .carousel-caption { width: 70%; bottom: 100px; }
-
-body #myCarousel .carousel-caption img { width: 60%; margin: auto; }
-
-body #myCarousel .carousel-caption .btn-primary { border: none; background-color: #7c1216; font-weight: 100; font-size: 14px; padding: 10px 30px; border-radius: 2px; }
-
-body #myCarousel .carousel-caption p { color: #273367; text-shadow: none; font-size: 18px; font-weight: 100; margin: 50px 0; }
-
-body #myCarousel .left, body #myCarousel .right { -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-content: center; -ms-flex-line-pack: center; align-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; display: -webkit-flex; display: -ms-flexbox; display: flex; }
-
-body #myCarousel .left i, body #myCarousel .right i { color: #7c1216; }
+body section h2 { color: #7c1216; margin-bottom: 25px; font-size: 18px; margin-top: 10px; }
 
 body .ax-conoce { background-color: #f4f4f4; text-align: center; }
 
@@ -60,7 +48,7 @@ body .ax-modulo .container .row .ax-sectionHeiht .row .ax-solicita { background:
 
 body .ax-modulo .container .row .ax-sectionHeiht .row .ax-solicita .btn-success { width: 100%; }
 
-body .ax-modulo .container .row .ax-sectionHeiht .row .ax-lateralMenu { color: white; padding: 10px; }
+body .ax-modulo .container .row .ax-sectionHeiht .row .ax-lateralMenu { color: white; padding: 10px; font-size: 16px; }
 
 body .ax-modulo .container .row .ax-sectionHeiht .row .ax-lateralMenu img, body .ax-modulo .container .row .ax-sectionHeiht .row .ax-lateralMenu p { display: inline-block; vertical-align: middle; }
 
@@ -230,25 +218,146 @@ body .ver { display: block !important; }
 
 body .opacity { opacity: 0.4; }
 
-@media only screen and (max-width: 768px) { body .navbar-brand { float: left; padding: 0 15px; font-size: 18px; line-height: 20px; height: 50px; width: 16%; }
-  body .ax-notDesktop { display: block; }
-  body .ax-notDesktop { display: block; }
+/*=================================================== Bootstrap 3 Media Queries ===================================================*/
+/*==========  Mobile First Method  ==========*/
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) { body .ax-notDesktop { display: block; }
   body .ax-notMobile { display: none; }
-  body .ax-modulo .container .row .ax-sectionHeiht { min-height: 380px; }
+  body header { height: 70px; padding: 0; }
+  body header .navbar { margin-bottom: 0px; }
+  body header .navbar .container-fluid { padding: 0; }
+  body header .navbar .container-fluid .navbar-header .navbar-toggle { margin: 6px; }
+  body header .navbar .container-fluid .navbar-header .navbar-brand { padding: 0; width: 20%; }
+  body header .navbar .container-fluid .navbar-collapse { padding: 0; background: #ffffff; }
+  body header .navbar .container-fluid .navbar-collapse ul { margin: 0; width: 100%; }
+  body header .navbar .container-fluid .navbar-collapse ul li a { padding: 14px 0; margin: 0 5px; }
+  body header .navbar .container-fluid .navbar-collapse ul li:nth-child(1) { width: 15%; }
+  body header .navbar .container-fluid .navbar-collapse ul li:nth-child(1) .navbar-brand { padding: 0 19px; width: 100%; }
+  body header .navbar .container-fluid .navbar-collapse ul li:nth-child(1) .navbar-brand img { width: 100%; }
+  body header .navbar-default { background-color: white !important; border-color: white !important; }
+  body header .navbar-default li a { color: #273367; text-transform: uppercase; font-weight: 100; font-size: 12px; }
+  body section { padding: 53px 0 0 0; }
+  body section h2 { font-weight: 100; margin-bottom: 40px; }
+  body #myCarousel { padding: 53px 0 0 0; }
+  body #myCarousel .carousel-caption { width: 70%; bottom: 100px; }
+  body #myCarousel .carousel-caption img { width: 60%; margin: auto; }
+  body #myCarousel .carousel-caption .btn-primary { border: none; background-color: #7c1216; font-weight: 100; font-size: 14px; padding: 10px 30px; border-radius: 2px; }
+  body #myCarousel .carousel-caption p { color: #273367; text-shadow: none; font-size: 18px; font-weight: 100; margin: 50px 0; }
+  body #myCarousel .left, body #myCarousel .right { -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-content: center; -ms-flex-line-pack: center; align-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+  body #myCarousel .left i, body #myCarousel .right i { color: #7c1216; }
+  body .ax-conoce { background-color: #f4f4f4; text-align: center; }
+  body .ax-conoce h2 { color: #7c1216; }
+  body .ax-conoce h2:after { content: ""; display: block; width: 80px; margin: 25px auto 0 auto; border-bottom: 2px solid #7c1216; }
+  body .ax-modulo .container .row h2:after { content: ""; display: block; width: 80px; margin: 25px auto 0 auto; border-bottom: 2px solid #ec6569; }
+  body .ax-modulo .container .row .ax-sectionHeiht { min-height: 380px; font-size: 10px; }
+  body .ax-modulo .container .row .ax-sectionHeiht .ax-mod-img { position: absolute; z-index: 20; top: 147px; display: none; overflow: hidden; right: 0; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group { margin: 0px; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel { border-radius: 0; border: none; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a { color: white; text-decoration: none; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a:hover { color: white; text-decoration: none; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a img, body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a p { display: inline-block; vertical-align: middle; }
   body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-body .col-md-1 { min-height: 300px; }
-  body footer { text-align: center; padding: 20px; }
-  body footer .co-md3, body footer .col-md-6, body footer .col-md-3 { margin-top: 10px; } }
+  body .ax-arancel ul .ax-changear a { display: inline-block; text-decoration: none; width: 100%; }
+  body .ax-arancel .ax-ama-ara span { left: 45px; position: absolute; }
+  body .ax-arancel .ax-ama-ara p { padding: 0 150px; }
+  body .ax-noticias { background-color: white; text-align: center; }
+  body .ax-noticias h2:after { content: ""; display: block; width: 80px; margin: 25px auto 0 auto; border-bottom: 2px solid #f57858; }
+  body .ax-noticias .ax-not h4 { font-size: 14px; }
+  body .ax-noticias .ax-not p { font-size: 12px; font-weight: 100; }
+  body .ax-noticias .ax-not .btn-primary { font-size: 12px; }
+  body footer { padding: 20px; }
+  body footer p { font-size: 13px; padding: 0px; margin: 7px 0 0 0; }
+  body footer ul { margin-bottom: 10px; text-align: center; margin-top: 10px; }
+  body .ocultar { display: none; }
+  body .ver { display: block !important; }
+  body .opacity { opacity: 0.4; } }
 
-@media only screen and (max-width: 568px) { body .navbar-brand { float: left; padding: 0 15px; font-size: 18px; line-height: 20px; height: 50px; width: 16%; }
-  body .ax-notDesktop { display: block; }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) { body .ax-notDesktop { display: block; }
   body .ax-notMobile { display: none; }
-  body .ax-modulo .container .row .ax-sectionHeiht { min-height: 380px; }
+  body header { height: 70px; padding: 0; }
+  body header .navbar { margin-bottom: 0px; }
+  body header .navbar .container-fluid { padding: 0; }
+  body header .navbar .container-fluid .navbar-header .navbar-toggle { margin: 6px; }
+  body header .navbar .container-fluid .navbar-header .navbar-brand { padding: 0; width: 20%; }
+  body header .navbar .container-fluid .navbar-collapse { padding: 0; background: #ffffff; }
+  body header .navbar .container-fluid .navbar-collapse ul { margin: 0; width: 100%; }
+  body header .navbar-default { background-color: white !important; border-color: white !important; }
+  body header .navbar-default li a { color: #273367; text-transform: uppercase; font-weight: 100; font-size: 12px; }
+  body section { padding: 53px 0 0 0; }
+  body section h2 { font-weight: 100; margin-bottom: 40px; }
+  body #myCarousel { padding: 53px 0 0 0; }
+  body #myCarousel .carousel-caption { width: 70%; bottom: 100px; }
+  body #myCarousel .carousel-caption img { width: 60%; margin: auto; }
+  body #myCarousel .carousel-caption .btn-primary { border: none; background-color: #7c1216; font-weight: 100; font-size: 14px; padding: 10px 30px; border-radius: 2px; }
+  body #myCarousel .carousel-caption p { color: #273367; text-shadow: none; font-size: 18px; font-weight: 100; margin: 50px 0; }
+  body #myCarousel .left, body #myCarousel .right { -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-content: center; -ms-flex-line-pack: center; align-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+  body #myCarousel .left i, body #myCarousel .right i { color: #7c1216; }
+  body .ax-conoce { background-color: #f4f4f4; text-align: center; }
+  body .ax-conoce h2 { color: #7c1216; }
+  body .ax-conoce h2:after { content: ""; display: block; width: 80px; margin: 25px auto 0 auto; border-bottom: 2px solid #7c1216; }
+  body .ax-modulo .container .row h2:after { content: ""; display: block; width: 80px; margin: 25px auto 0 auto; border-bottom: 2px solid #ec6569; }
+  body .ax-modulo .container .row .ax-sectionHeiht { min-height: 380px; font-size: 10px; }
+  body .ax-modulo .container .row .ax-sectionHeiht .ax-mod-img { position: absolute; z-index: 20; top: 147px; display: none; overflow: hidden; right: 0; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group { margin: 0px; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel { border-radius: 0; border: none; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a { color: white; text-decoration: none; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a:hover { color: white; text-decoration: none; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a img, body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a p { display: inline-block; vertical-align: middle; }
   body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-body .col-md-1 { min-height: 300px; }
-  body .header { margin: 50px 0; }
-  body .header .navbar-brand { position: absolute; top: -30px; }
-  body .header .navbar-brand img { width: 35%; }
-  body .header .navbar-collapse { margin-top: 30px; }
-  body h2 { font-size: 45px; }
-  body .ax-noticias .ax-noti { margin-top: 30px; }
-  body footer { text-align: center; padding: 20px; }
-  body footer .co-md3, body footer .col-md-6, body footer .col-md-3 { margin-top: 10px; } }
+  body .ax-noticias { background-color: white; text-align: center; }
+  body .ax-noticias h2:after { content: ""; display: block; width: 80px; margin: 25px auto 0 auto; border-bottom: 2px solid #f57858; }
+  body .ax-noticias .ax-not h4 { font-size: 14px; }
+  body .ax-noticias .ax-not p { font-size: 12px; font-weight: 100; }
+  body .ax-noticias .ax-not .btn-primary { font-size: 12px; }
+  body footer { padding: 20px; }
+  body footer p { font-size: 13px; padding: 0px; margin: 7px 0 0 0; }
+  body footer ul { margin-bottom: 10px; text-align: center; margin-top: 10px; }
+  body .ocultar { display: none; }
+  body .ver { display: block !important; }
+  body .opacity { opacity: 0.4; } }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) { body .ax-notDesktop { display: block; }
+  body .ax-notMobile { display: none; }
+  body header { height: 50px; padding: 0; }
+  body header .navbar { margin-bottom: 0px; }
+  body header .navbar .container-fluid { padding: 0; }
+  body header .navbar .container-fluid .navbar-header .navbar-toggle { margin: 6px; }
+  body header .navbar .container-fluid .navbar-header .navbar-brand { padding: 0; width: 20%; }
+  body header .navbar .container-fluid .navbar-collapse { padding: 0; background: #ffffff; }
+  body header .navbar .container-fluid .navbar-collapse ul { margin: 0; width: 100%; }
+  body header .navbar-default { background-color: white !important; border-color: white !important; }
+  body header .navbar-default li a { color: #273367; text-transform: uppercase; font-weight: 100; font-size: 12px; }
+  body section { padding: 53px 0 0 0; }
+  body section h2 { font-weight: 100; margin-bottom: 40px; }
+  body #myCarousel { padding: 53px 0 0 0; }
+  body #myCarousel .carousel-caption { width: 70%; bottom: 100px; }
+  body #myCarousel .carousel-caption img { width: 60%; margin: auto; }
+  body #myCarousel .carousel-caption .btn-primary { border: none; background-color: #7c1216; font-weight: 100; font-size: 14px; padding: 10px 30px; border-radius: 2px; }
+  body #myCarousel .carousel-caption p { color: #273367; text-shadow: none; font-size: 18px; font-weight: 100; margin: 50px 0; }
+  body #myCarousel .left, body #myCarousel .right { -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-content: center; -ms-flex-line-pack: center; align-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+  body #myCarousel .left i, body #myCarousel .right i { color: #7c1216; }
+  body .ax-conoce { background-color: #f4f4f4; text-align: center; }
+  body .ax-conoce h2 { color: #7c1216; }
+  body .ax-conoce h2:after { content: ""; display: block; width: 80px; margin: 25px auto 0 auto; border-bottom: 2px solid #7c1216; }
+  body .ax-modulo .container .row h2:after { content: ""; display: block; width: 80px; margin: 25px auto 0 auto; border-bottom: 2px solid #ec6569; }
+  body .ax-modulo .container .row .ax-sectionHeiht { min-height: 380px; font-size: 10px; }
+  body .ax-modulo .container .row .ax-sectionHeiht .ax-mod-img { position: absolute; z-index: 20; top: 147px; display: none; overflow: hidden; right: 0; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group { margin: 0px; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel { border-radius: 0; border: none; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a { color: white; text-decoration: none; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a:hover { color: white; text-decoration: none; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a img, body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-heading .collapsed a p { display: inline-block; vertical-align: middle; }
+  body .ax-modulo .container .row .ax-sectionHeiht .panel-group .panel .panel-body .col-md-1 { min-height: 300px; }
+  body .ax-noticias { background-color: white; text-align: center; }
+  body .ax-noticias h2:after { content: ""; display: block; width: 80px; margin: 25px auto 0 auto; border-bottom: 2px solid #f57858; }
+  body .ax-noticias .ax-not h4 { font-size: 14px; }
+  body .ax-noticias .ax-not p { font-size: 12px; font-weight: 100; }
+  body .ax-noticias .ax-not .btn-primary { font-size: 12px; }
+  body footer { padding: 20px; }
+  body footer p { font-size: 13px; padding: 0px; margin: 7px 0 0 0; }
+  body footer ul { margin-bottom: 10px; text-align: center; margin-top: 10px; }
+  body .ocultar { display: none; }
+  body .ver { display: block !important; }
+  body .opacity { opacity: 0.4; } }

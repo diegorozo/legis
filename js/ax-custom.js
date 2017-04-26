@@ -91,23 +91,51 @@ $('.ax-mod-img').click(function(){
     $('.ax-mod-img').removeClass('bounceInDown ver');
 });
 
-$('.ax-changear').click(function(){
-    $('.ax-flagChange').removeClass('ax-change-arancel');
-    $('.ax-flagChange').addClass('ax-ama-ara');
-    $('.ax-flagChange',this).addClass('ax-change-arancel');
-    $('.ax-flagChange',this).removeClass('ax-ama-ara');
-});
-
-$(".ax-changear").on('mouseenter', function() {
-    $(this, ".ax-changear").css({"top":"-30px"});
-});
-
-$(".ax-changear").on('mouseleave', function(){
-    $(this, ".ax-changear").css({"top":"0"});
-});
-
-
 $('.ax-principalMenu>a').click(function(){
     $('.ax-principalMenu').removeClass('active');
     $(this, 'a').parent().addClass('active');
 });
+
+
+var tipoDeMobil = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+        return (tipoDeMobil.Android() || tipoDeMobil.BlackBerry() || tipoDeMobil.iOS() || tipoDeMobil.Opera() || tipoDeMobil.Windows());
+    }
+};
+
+if(tipoDeMobil.iOS()){
+    $('#ax-notArancel').removeClass('ax-notMobile');
+    console.log('ANDREW ES EL MEJOR');
+    //...
+} else if (tipoDeMobil.any()) {
+
+}else{
+    $('.ax-changear').click(function(){
+        $('.ax-flagChange').removeClass('ax-change-arancel');
+        $('.ax-flagChange').addClass('ax-ama-ara');
+        $('.ax-flagChange',this).addClass('ax-change-arancel');
+        $('.ax-flagChange',this).removeClass('ax-ama-ara');
+    });
+    $(".ax-changear").on('mouseenter', function() {
+        $(this, ".ax-changear").css({"top":"-30px"});
+    });
+
+    $(".ax-changear").on('mouseleave', function(){
+        $(this, ".ax-changear").css({"top":"0"});
+    });
+}

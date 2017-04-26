@@ -24,7 +24,7 @@ $texto: #6a6a6a
 
 body
     font-family: 'trade-gothic-lt-std4'
-    font-size: 1em
+    font-size: 16px
     color: $texto
     position: relative
 
@@ -42,7 +42,6 @@ body
 
     .ax-notMobile
         display: block
-
 
     header
         padding: 18px 0
@@ -66,13 +65,40 @@ body
     section
         padding: 180px 0 0 0
 
-        h2
-            color: #7c1216
-            margin-bottom: 25px
-            font-size: 18px
-            margin-top: 10px
+    #myCarousel
+        padding: 90px 0 0 0
 
-    /*#myCarousel*/
+        .carousel-caption
+            width: 70%
+            bottom: 100px
+
+            img
+                width: 60%
+                margin: auto
+
+            .btn-primary
+                border: none
+                background-color: $rojo-os
+                font-weight: 100
+                font-size: 14px
+                padding: 10px 30px
+                border-radius: 2px
+
+            p
+                color: #273367
+                text-shadow: none
+                font-size: 18px
+                font-weight: 100
+                margin: 50px 0
+
+        .left, .right
+            justify-content: center
+            align-content: center
+            align-items: center
+            display: flex
+
+            i
+                color: $rojo-os
 
     .ax-conoce
         background-color: $gris-cl
@@ -90,6 +116,7 @@ body
             margin: 25px auto 0 auto
             border-bottom: 2px solid  $rojo-os
 
+    //refactor
     .ax-modulo
         background-color: white
         .container
@@ -123,7 +150,6 @@ body
                         .ax-lateralMenu
                             color: white
                             padding: 10px
-                            font-size: 16px;
                             img, p
                                 display: inline-block
                                 vertical-align: middle
@@ -408,14 +434,14 @@ body
             margin: 10px 0 0 0
 
             &:before
-                content: ""
-                position: absolute
-                bottom: -30px
-                width: 0
-                height: 0
-                border-left: 20px solid transparent
-                border-right: 20px solid transparent
-                border-top: 30px solid $amarillo-cl
+                content: "";
+                position: absolute;
+                bottom: -30px;
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 30px solid $amarillo-cl;
 
             span
                 border-radius: 50%
@@ -552,8 +578,12 @@ body
                     align-items: center
                     align-content: center
                     justify-content: center
+
+
                     i
                         color: white
+
+
     .ocultar
         display: none
 
@@ -564,580 +594,91 @@ body
     .opacity
         opacity: 0.4
 
+
+@media only screen and (max-width: 768px)
+    body
+        .navbar-brand
+            float: left
+            padding: 0 15px
+            font-size: 18px
+            line-height: 20px
+            height: 50px
+            width: 16%
+        .ax-notDesktop
+            display: block
+        .ax-notDesktop
+            display: block
+
+        .ax-notMobile
+            display: none
+
+        .ax-modulo .container .row .ax-sectionHeiht
+            min-height: 380px
+            .panel-group .panel .panel-body .col-md-1
+                min-height: 300px
+
+        footer
+            text-align: center
+            padding: 20px
+
+            .co-md3, .col-md-6, .col-md-3
+                margin-top: 10px
+
+@media only screen and (max-width: 568px)
+    body
+        .navbar-brand
+            float: left
+            padding: 0 15px
+            font-size: 18px
+            line-height: 20px
+            height: 50px
+            width: 16%
+        .ax-notDesktop
+            display: block
+
+        .ax-notMobile
+            display: none
+        .ax-modulo .container .row .ax-sectionHeiht
+            min-height: 380px
+
+            .panel-group .panel .panel-body .col-md-1
+                min-height: 300px
+        .header
+            margin: 50px 0
+
+            .navbar-brand
+                position: absolute
+                top: -30px
+
+                img
+                    width: 35%
+
+            .navbar-collapse
+                margin-top: 30px
+
+        h2
+            font-size: 45px
+
+        .ax-noticias
+            .ax-noti
+                margin-top: 30px
+
+        footer
+            text-align: center
+            padding: 20px
+
+            .co-md3, .col-md-6, .col-md-3
+                margin-top: 10px
+
+
 //@media only screen and (max-width: 414px)
 
-/*=================================================== Bootstrap 3 Media Queries ===================================================*/
 
-/*==========  Mobile First Method  ==========*/
 
-/* Small Devices, Tablets
-@media only screen and (max-width : 768px)
-    body
-        .ax-notDesktop
-            display: block
 
-        .ax-notMobile
-            display: none
 
-        header
-            height: 70px
-            padding: 0
-            .navbar
-                margin-bottom: 0px
-                .container-fluid
-                    padding: 0
-                    .navbar-header
-                        .navbar-toggle
-                            margin: 6px
-                        .navbar-brand
-                            padding: 0
-                            width: 20%
-                    .navbar-collapse
-                        padding: 0
-                        background: #ffffff
-                        ul
-                            margin: 0
-                            width: 100%
 
-                            li
-                                a
-                                    padding: 14px 0
-                                    margin: 0 5px
 
-                            li:nth-child(1)
-                                width: 15%
-                                .navbar-brand
-                                    padding: 0 19px
-                                    width: 100%
-                                    img
-                                        width: 100%
 
-            .navbar-default
-                background-color: white !important
-                border-color: white !important
 
-                li
-                    a
-                        color: $azul-os
-                        text-transform: uppercase
-                        font-weight: 100
-                        font-size: 12px
 
-        section
-            padding: 53px 0 0 0
-            h2
-                font-weight: 100
-                margin-bottom: 40px
-
-        #myCarousel
-            padding: 53px 0 0 0
-
-            .carousel-caption
-                width: 70%
-                bottom: 100px
-
-                img
-                    width: 60%
-                    margin: auto
-
-                .btn-primary
-                    border: none
-                    background-color: $rojo-os
-                    font-weight: 100
-                    font-size: 14px
-                    padding: 10px 30px
-                    border-radius: 2px
-
-                p
-                    color: #273367
-                    text-shadow: none
-                    font-size: 18px
-                    font-weight: 100
-                    margin: 50px 0
-
-            .left, .right
-                justify-content: center
-                align-content: center
-                align-items: center
-                display: flex
-
-                i
-                    color: $rojo-os
-
-        .ax-conoce
-            background-color: $gris-cl
-            text-align: center
-
-            h2
-                color: $rojo-os
-
-                &:after
-                    content: ""
-                    display: block
-                    width: 80px
-                    margin: 25px auto 0 auto
-                    border-bottom: 2px solid  $rojo-os
-
-        .ax-modulo
-            .container
-                .row
-                    h2
-                        &:after
-                            content: ""
-                            display: block
-                            width: 80px
-                            margin: 25px auto 0 auto
-                            border-bottom: 2px solid $rojo-cl
-                    .ax-sectionHeiht
-                        min-height: 380px
-                        font-size: 10px
-
-                        .ax-mod-img
-                            position: absolute
-                            z-index: 20
-                            top: 147px
-                            display: none
-                            overflow: hidden
-                            right: 0
-                        .panel-group
-                            margin: 0px
-                            .panel
-                                border-radius: 0
-                                border: none
-                                .panel-heading
-                                    .collapsed
-                                        a
-                                            color: white
-                                            text-decoration: none
-
-                                            &:hover
-                                                color: white
-                                                text-decoration: none
-                                            img,p
-                                                display: inline-block
-                                                vertical-align: middle
-                                .panel-body
-                                    .col-md-1
-                                        min-height: 300px
-        .ax-arancel
-            ul
-                .ax-changear
-                    a
-                        display: inline-block
-                        text-decoration: none
-                        width: 100%
-            .ax-ama-ara
-                span
-                    left: 45px
-                    position: absolute
-                p
-                    padding: 0 150px
-
-
-        .ax-noticias
-            background-color: white
-            text-align: center
-
-            h2
-
-                &:after
-                    content: ""
-                    display: block
-                    width: 80px
-                    margin: 25px auto 0 auto
-                    border-bottom: 2px solid  $naranja
-
-            .ax-not
-                h4
-                    font-size: 14px
-                p
-                    font-size: 12px
-                    font-weight: 100
-
-                .btn-primary
-                    font-size: 12px
-
-        footer
-            padding: 20px
-
-            p
-                font-size: 13px
-                padding: 0px
-                margin: 7px 0 0 0
-
-            ul
-                margin-bottom: 10px
-                text-align: center
-                margin-top: 10px
-
-        .ocultar
-            display: none
-
-        .ver
-            display: block !important
-
-
-        .opacity
-            opacity: 0.4
-
-/* Extra Small Devices, Phones
-@media only screen and (max-width : 480px)
-    body
-        .ax-notDesktop
-            display: block
-
-        .ax-notMobile
-            display: none
-        header
-            height: 70px
-            padding: 0
-            .navbar
-                margin-bottom: 0px
-                .container-fluid
-                    padding: 0
-                    .navbar-header
-                        .navbar-toggle
-                            margin: 6px
-                        .navbar-brand
-                            padding: 0
-                            width: 20%
-                    .navbar-collapse
-                        padding: 0
-                        background: #ffffff
-                        ul
-                            margin: 0
-                            width: 100%
-
-            .navbar-default
-                background-color: white !important
-                border-color: white !important
-
-                li
-                    a
-                        color: $azul-os
-                        text-transform: uppercase
-                        font-weight: 100
-                        font-size: 12px
-
-        section
-            padding: 53px 0 0 0
-            h2
-                font-weight: 100
-                margin-bottom: 40px
-
-        #myCarousel
-            padding: 53px 0 0 0
-
-            .carousel-caption
-                width: 70%
-                bottom: 100px
-
-                img
-                    width: 60%
-                    margin: auto
-
-                .btn-primary
-                    border: none
-                    background-color: $rojo-os
-                    font-weight: 100
-                    font-size: 14px
-                    padding: 10px 30px
-                    border-radius: 2px
-
-                p
-                    color: #273367
-                    text-shadow: none
-                    font-size: 18px
-                    font-weight: 100
-                    margin: 50px 0
-
-            .left, .right
-                justify-content: center
-                align-content: center
-                align-items: center
-                display: flex
-
-                i
-                    color: $rojo-os
-
-        .ax-conoce
-            background-color: $gris-cl
-            text-align: center
-
-            h2
-                color: $rojo-os
-
-                &:after
-                    content: ""
-                    display: block
-                    width: 80px
-                    margin: 25px auto 0 auto
-                    border-bottom: 2px solid  $rojo-os
-
-        .ax-modulo
-            .container
-                .row
-                    h2
-                        &:after
-                            content: ""
-                            display: block
-                            width: 80px
-                            margin: 25px auto 0 auto
-                            border-bottom: 2px solid $rojo-cl
-                    .ax-sectionHeiht
-                        min-height: 380px
-                        font-size: 10px
-
-                        .ax-mod-img
-                            position: absolute
-                            z-index: 20
-                            top: 147px
-                            display: none
-                            overflow: hidden
-                            right: 0
-                        .panel-group
-                            margin: 0px
-                            .panel
-                                border-radius: 0
-                                border: none
-                                .panel-heading
-                                    .collapsed
-                                        a
-                                            color: white
-                                            text-decoration: none
-
-                                            &:hover
-                                                color: white
-                                                text-decoration: none
-                                            img,p
-                                                display: inline-block
-                                                vertical-align: middle
-                                .panel-body
-                                    .col-md-1
-                                        min-height: 300px
-        .ax-noticias
-            background-color: white
-            text-align: center
-
-            h2
-
-                &:after
-                    content: ""
-                    display: block
-                    width: 80px
-                    margin: 25px auto 0 auto
-                    border-bottom: 2px solid  $naranja
-
-            .ax-not
-                h4
-                    font-size: 14px
-                p
-                    font-size: 12px
-                    font-weight: 100
-
-                .btn-primary
-                    font-size: 12px
-
-        footer
-            padding: 20px
-
-            p
-                font-size: 13px
-                padding: 0px
-                margin: 7px 0 0 0
-
-            ul
-                margin-bottom: 10px
-                text-align: center
-                margin-top: 10px
-
-        .ocultar
-            display: none
-
-        .ver
-            display: block !important
-
-
-        .opacity
-            opacity: 0.4
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-    body
-        .ax-notDesktop
-            display: block
-
-        .ax-notMobile
-            display: none
-        header
-            height: 50px
-            padding: 0
-            .navbar
-                margin-bottom: 0px
-                .container-fluid
-                    padding: 0
-                    .navbar-header
-                        .navbar-toggle
-                            margin: 6px
-                        .navbar-brand
-                            padding: 0
-                            width: 20%
-                    .navbar-collapse
-                        padding: 0
-                        background: #ffffff
-                        ul
-                            margin: 0
-                            width: 100%
-
-            .navbar-default
-                background-color: white !important
-                border-color: white !important
-
-                li
-                    a
-                        color: $azul-os
-                        text-transform: uppercase
-                        font-weight: 100
-                        font-size: 12px
-
-        section
-            padding: 53px 0 0 0
-            h2
-                font-weight: 100
-                margin-bottom: 40px
-
-        #myCarousel
-            padding: 53px 0 0 0
-
-            .carousel-caption
-                width: 70%
-                bottom: 100px
-
-                img
-                    width: 60%
-                    margin: auto
-
-                .btn-primary
-                    border: none
-                    background-color: $rojo-os
-                    font-weight: 100
-                    font-size: 14px
-                    padding: 10px 30px
-                    border-radius: 2px
-
-                p
-                    color: #273367
-                    text-shadow: none
-                    font-size: 18px
-                    font-weight: 100
-                    margin: 50px 0
-
-            .left, .right
-                justify-content: center
-                align-content: center
-                align-items: center
-                display: flex
-
-                i
-                    color: $rojo-os
-
-        .ax-conoce
-            background-color: $gris-cl
-            text-align: center
-
-            h2
-                color: $rojo-os
-
-                &:after
-                    content: ""
-                    display: block
-                    width: 80px
-                    margin: 25px auto 0 auto
-                    border-bottom: 2px solid  $rojo-os
-
-        .ax-modulo
-            .container
-                .row
-                    h2
-                        &:after
-                            content: ""
-                            display: block
-                            width: 80px
-                            margin: 25px auto 0 auto
-                            border-bottom: 2px solid $rojo-cl
-                    .ax-sectionHeiht
-                        min-height: 380px
-                        font-size: 10px
-
-                        .ax-mod-img
-                            position: absolute
-                            z-index: 20
-                            top: 147px
-                            display: none
-                            overflow: hidden
-                            right: 0
-                        .panel-group
-                            margin: 0px
-                            .panel
-                                border-radius: 0
-                                border: none
-                                .panel-heading
-                                    .collapsed
-                                        a
-                                            color: white
-                                            text-decoration: none
-
-                                            &:hover
-                                                color: white
-                                                text-decoration: none
-                                            img,p
-                                                display: inline-block
-                                                vertical-align: middle
-                                .panel-body
-                                    .col-md-1
-                                        min-height: 300px
-        .ax-noticias
-            background-color: white
-            text-align: center
-
-            h2
-
-                &:after
-                    content: ""
-                    display: block
-                    width: 80px
-                    margin: 25px auto 0 auto
-                    border-bottom: 2px solid  $naranja
-
-            .ax-not
-                h4
-                    font-size: 14px
-                p
-                    font-size: 12px
-                    font-weight: 100
-
-                .btn-primary
-                    font-size: 12px
-
-        footer
-            padding: 20px
-
-            p
-                font-size: 13px
-                padding: 0px
-                margin: 7px 0 0 0
-
-            ul
-                margin-bottom: 10px
-                text-align: center
-                margin-top: 10px
-
-        .ocultar
-            display: none
-
-        .ver
-            display: block !important
-
-
-        .opacity
-            opacity: 0.4

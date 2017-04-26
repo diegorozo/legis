@@ -26,7 +26,7 @@
         <header class="navbar-fixed-top">
             <div>
                 <div class="container">
-                    <div class="col-md-1 hidden-xs">
+                    <div class="col-md-1 hidden-xs ax-notMobile">
                         <h1><img class="img-responsive" src="images/Logo-Legis.png" alt="legis" title="Legis"></h1>
                     </div>
                     <div class="col-md-11">
@@ -47,7 +47,13 @@
 
                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
                                     <ul class="nav navbar-nav">
+                                        <li class="ax-notDesktop">
+                                            <a class="navbar-brand" href="#">
+                                                <img class="img-responsive" src="images/Logo-Legis.png" alt="legis">
+                                            </a>
+                                        </li>
                                         <li class="ax-principalMenu active"><a href="#ax-legiscomex" class="page-scroll">Legiscomex <span class="sr-only">(current)</span></a></li>
                                         <li class="ax-principalMenu dropdown">
                                             <a class="page-scroll" href="#ax-modulo" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Módulos<span class="caret"></span></a>
@@ -55,7 +61,7 @@
                                                 <li><a href="#">Item1</a></li>
                                             </ul>
                                         </li>
-                                        <li class="ax-principalMenu "><a class="page-scroll" href="#ax-arancel">Arancel electrónico</a></li>
+                                        <li id="ax-notArancel" class="ax-principalMenu ax-notMobile"><a class="page-scroll" href="#ax-arancel">Arancel electrónico</a></li>
                                         <li class="ax-principalMenu "><a class="page-scroll" href="#ax-conoce">Cómo funciona</a></li>
                                         <li class="ax-principalMenu "><a class="page-scroll" href="#ax-noticias">noticias</a></li>
                                         <li class="ax-principalMenu "><a class="page-scroll" href="#ax-formulario">contáctenos</a></li>
